@@ -1,0 +1,263 @@
+/* .dashboard{
+    background-image:url("../assets/dashbackground.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+} */
+.dashnavbar{
+    height: 100px;
+    width: 100%;
+    /* left: 2rem; */
+    /* top: 15rem; */
+    /* right: 2rem; */
+    top: 0;
+    background-color: black;
+color: white;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+position: fixed;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+padding: 2rem;
+
+}
+.dashnavbar .left{
+    margin-left: 10rem;
+}
+.dashnavbar .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    gap: 1rem;
+    margin-right: 10rem;    
+}
+.dashnavbar .icon{
+    margin-right: 2px;
+    font-size: 1rem;
+    margin-top: 2px;    
+}
+.button{
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 40px;
+    width: 100px;
+    margin-top: -7px;
+    /* border: none;
+    padding: 5px 5px; */
+    
+    
+}
+.card{
+    height:240px ;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    /* margin-top: 100px; */
+    /* padding-bottom: rem; */
+    
+    background-color: white;
+color: black;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+}
+.card .cardcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 2.5rem;
+}
+.card .patients{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: rem;
+}
+
+.smallcard1{
+    height: 110px;
+    width: 180px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -250px;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    background-color: rgb(71, 151, 222);
+}
+.smallcard1 .icon{
+    font-size: 2rem;
+}
+.smallcard2{
+    height: 110px;
+    width: 180px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -250px;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    background-color: rgb(86, 133, 16);
+}
+.smallcard2 .icon{
+    font-size: 2rem;
+}
+
+.smallcard3{
+    height: 110px;
+    width: 180px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: -250px;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    background-color: rgb(199, 21, 21);
+}
+.smallcard3 .icon{
+    font-size: 2rem;
+}
+
+.cardcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 10rem;
+}
+.charts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 10rem;
+}
+
+
+
+/* .Orderstitle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 40rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+} */
+/* .Orderstitle h2{
+    font-size: 13px;
+    color: black;
+} */
+/* .Orderstitle h3{
+    font-size: 2rem;
+    font-weight: 500;
+    
+} */
+/* .Orderstitle .icon{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(248, 215, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+} */
+ .tablehead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: black;
+    font-size: 1.5rem;
+   background-color: blue;
+ }
+.orderspage{
+    background-color: white;
+    height: 100vh;
+    padding: 1rem;
+    margin-left: 143px;
+    margin-right: 120px;
+    border-radius: 3px;
+    z-index: 1;
+}
+.orderspage .search{
+ height: 30px;
+ width: 200px;
+ margin-left: 1rem;
+ border: 1px solid black;
+
+} 
+.search .icon{
+    color: black;
+}
+.search input{
+    
+    height: px;
+    width: 100px; 
+    background-color: white;
+    border: none;  
+}
+.table{  
+    /* background-color: white; */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 98%;
+    margin-top: 15px;
+    
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    
+  
+}
+
+
+th{
+    padding: 0.75rem;
+    text-align: left;
+    justify-content: left; 
+    color: black;
+    
+    
+} 
+td{
+    padding: 0.75rem;
+    text-align: left;
+    justify-content: left; 
+    color: gray;
+
+}
+th{
+    background-color: white;
+}
+tr:nth-child(even){
+    background: #f9f9f9;
+}
+
+

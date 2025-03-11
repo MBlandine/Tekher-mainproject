@@ -1,0 +1,56 @@
+/* .dashboard{
+    background-image:url("../assets/dashbackground.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+} */
+.dashnavbar{
+    height: 100px;
+    width: 100%;
+    /* left: 2rem; */
+    /* top: 15rem; */
+    /* right: 2rem; */
+    top: 0;
+    background-color: black;
+color: white;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+position: fixed;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+padding: 2rem;
+
+}
+.dashnavbar .left{
+    margin-left: 10rem;
+}
+.dashnavbar .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    gap: 1rem;
+    margin-right: 10rem;    
+}
+.dashnavbar .icon{
+    margin-right: 2px;
+    font-size: 1rem;
+    margin-top: 2px;    
+}
+.button{
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 40px;
+    width: 100px;
+    margin-top: -7px;
+    /* border: none;
+    padding: 5px 5px; */
+    
+    
+}
