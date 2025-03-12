@@ -1,0 +1,67 @@
+
+.home{
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    height: 100vh;
+    width: 100%;
+
+}
+.navbar{
+    display: flex;
+    gap: 34.1rem;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+    padding: 20px;
+    padding-top: 2rem;
+    
+    /* background-color:black; */
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+.iconn{
+    font-size: 13px;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 11px;
+    /* font-weight: 500; */
+
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* align-items: center; */
+    justify-content: center;
+    margin-left: 120px;
+    /* margin-right: 120px; */
+    margin-top: 130px;
+
+}
+.first{
+    font-size: 40px;
+    font-weight: 700;
+    width: 450px;
+    /* background-color: black; */
+}
+.third{
+    background-color: red;
+    width: 190px;
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
