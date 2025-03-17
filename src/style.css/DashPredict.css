@@ -1,43 +1,56 @@
-.onetimeuser{
-    background-image: url(../assets/dashbackground.jpg);
+.dashpredict{
+    background-image: url('../assets/dashbackground.jpg');
     background-size: cover;
-    width: 100%;
     height: 140vh;
+    width: 130%;
 }
-.navbar{
-    display: flex;
-    gap: 30.6rem;
-    margin-left: 130px;
-    margin-right: 110px;
-    align-items: center;
-    padding: 20px;
-    padding-top: 2rem;
-    
-    /* background-color:black; */
+.predictnavbar{
+    background-image: url('../assets/dashbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80px;
+    width: 100%;
+    top: 0;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+position: fixed;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+padding: 2rem;
+
 }
-.icon{
+.predictnavbar .predict-left{
+    margin-left: 10rem;
+}
+.predictnavbar .predict-right{
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    justify-content: space-between;
+    list-style: none;
+    gap: 1rem;
+    margin-right: 5rem;    
+}
+.predictnavbar .predict-icon{
+    margin-right: 2px;
+    font-size: 1rem;
+    margin-top: 2px;    
+}
+.predict-buton{
+    background-color: red;
     color: white;
-}
-.iconn{
-    font-size: 13px;
-}
-.logo{
-    font-size: 20px;
-    font-weight: 500;
-
-}
-.menu{
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 11px;
-    /* font-weight: 500; */
-
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 40px;
+    width: 100px;
+    margin-top: -7px;
+ 
+    
+    
 }
-.onetimeusers{
+
+.predict-onetimeusers{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -45,8 +58,9 @@
     gap: 40px;
     /* background-color: red; */
     margin-top: 5rem;
+    padding-top: 60px;
 }
-.Left{
+.predict-Left{
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -62,13 +76,13 @@
     background: linear-gradient(to top, black, transparent);
     
 }
-.buttons{
+.predict-buttons{
    display: flex;
    flex-direction: column;
    
    gap: 5px;
 }
-.one{
+.predict-one{
     background-color: rgb(0, 179, 255);
     height: 80px;
     width: 80px;
@@ -81,7 +95,7 @@
     font-size: 10px;
     font-weight: 700;
 }
-.two{
+.predict-two{
     background-color: rgb(0, 179, 255);
     height: 80px;
     width: 80px;
@@ -94,30 +108,30 @@
     font-size: 10px;
     font-weight: 700;
 }
-.buttons .icon{
+.predict-buttons .predict-icon{
     font-size: 20px;
     font-weight: 700;
 }
-.words{
+.predict-words{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     font-size: 13px;
 }
-.Right{
+.predict-Right{
     display: flex;
     flex-direction: column;
     gap: 50px;
     background-color: white;
     color: black;
-    height: 40rem;
-    width: 30rem;
+    height: 43rem;
+    width: 33rem;
     border-radius: 5px;
 }
-.top{
+.predict-top{
     background-color: rgb(0, 179, 255);
     height: 50px;
-    width: 435px;
+    width: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,73 +142,77 @@
     font-size: 15px;
     /* padding-bottom: 5rem; */
 }
-.bottom{
+.predict-bottom{
     display: flex;
     flex-direction: column;
     gap: 30px;
     /* padding-top: 2rem; */
     /* margin-top: rem; */
 }
-.title{
+.predict-title{
     display: flex;
     justify-content: center;
     font-size: 15px;
     /* margin-top: 2rem; */
 }
-.leftside{
+.predict-leftside{
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: px;
     /* background-color: red; */
 }
-.rightside{
+.predict-rightside{
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: px;
     /* background-color: blue; */
 }
-.leftside input{
-    font-size: 1rem;
+.predict-leftside input{
+    /* font-size: 1rem; */
     border: none;
     outline: none;
     color: black;
     width: 200px;
-    background-color: white;
-    margin-top: 1rem;
+    background-color: rgb(255, 254, 254);
+    
 }
-.rightside input{
-    font-size: 1rem;
+.predict-rightside input{
+    /* font-size: 1rem; */
     border: none;
     outline: none;
     color: black;
+    height: 20px;
     width: 200px;
-    background-color: white;
-    margin-top: 1rem;
+    background-color: rgb(255, 255, 255);
+    
 }
 .predict-form {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid black;
     width: 220px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    /* background-color: black; */
     /* margin-top: 3rem; */
   /* margin-bottom:3rem;   */
 }
 .predict-label{
     font-size: 15px;
+    /* background-color: red; */
 }
-.middle{
+.predict-middle{
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 30px;
     margin-left: 2rem;
+    margin-right: 1rem;
     margin-top: 2rem;
     /* justify-content: center; */
 
 }
-.Right .buttonn{
+.predict-Right .predict-buttonn{
    background-color: rgb(0, 179, 255);
    color: white;
    width: 120px;

@@ -1,3 +1,94 @@
+import React from 'react'
+import '../style.css/Login.css'
+import { IoHomeSharp } from "react-icons/io5";
+import { BsFillPersonFill } from "react-icons/bs";
+import { FaRobot } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { FcBusinessman } from "react-icons/fc";
+import { Link } from 'react-router-dom';
+
+const Login = () => {
+  return (
+    <div className='registration'>
+    <div className='login-navbar'>
+        <div className='login-logo'>NeuralHack</div>
+        <div className='login-menu'>
+            
+                <Link to="/Home"><div className='login-icon'><IoHomeSharp className='login-iconn' />HOME</div></Link>
+                <Link to="/Login"><div className='login-icon'><BsFillPersonFill  className='login-iconn' />LOGIN/ REGISTER</div></Link>
+                <Link to="/OneTimeUser"><div className='login-icon'><BsFillPersonFill className='login-iconn'/>ONE TIME USER?</div></Link>
+                <div className='icon'><FaRobot className='login-iconn'/>AIML GEEKS?</div>
+            
+        </div>
+    </div>
+    <div className='register'>
+    <div className='register-container'>
+        <div className='tittle'>Login</div>
+        <div className='picture'><FcBusinessman /></div>
+        <div className='text'>
+        <div className='icon2'><BsFillPersonFill /><form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+        <div className='icon2'><RiLockPasswordFill /><form><input type="text" placeholder='Password' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+        
+        </div>
+        <div className='button'>CLICKCLICK!!!</div>
+    </div>
+    </div>
+</div>
+  )
+}
+
+export default Login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import '../style.css/Login.css';

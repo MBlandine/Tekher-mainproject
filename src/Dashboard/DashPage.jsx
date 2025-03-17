@@ -9,13 +9,13 @@ import { IoMdSearch } from "react-icons/io";
 
 const DashPage = () => {
   return (
-    <div>
+    <div className='dashpage'>
        <div className='dashnavbar'>
-        <div className='left'>Welcome, Username</div>
-        <div className='right'>
-        <li className='item'><MdDashboard className='icon'/>DASHBOARD</li>
-        <li className='item'><CgMenuGridR className='icon'/>OTHERS <IoMdArrowDropdown /></li>
-        <li className='button'><BsFillPersonFill />LOGOUT</li>
+        <div className='dashpage-left'>Welcome, Username</div>
+        <div className='dashpage-right'>
+        <li className='item'><MdDashboard className='dashpage-icon'/>DASHBOARD</li>
+        <li className='item'><CgMenuGridR className='dashpage-icon'/>OTHERS <IoMdArrowDropdown /></li>
+        <li className='dashpage-buton'><BsFillPersonFill />LOGOUT</li>
         </div>
         </div>
     <div className='cardcontainer'>
@@ -47,24 +47,24 @@ const DashPage = () => {
     <div className='table'>
 
       <div className='orderspage'>
-        <div className='tablehead'><div>PATIENTS DATA HISTORY</div><div className='search'> <IoMdSearch className='icon' /> <input type='search' placeholder='Search'/>
+        <div className='tablehead'><div>PATIENTS DATA HISTORY</div><div className='dashsearch'> <IoMdSearch className='icon' /> <input type='search' placeholder='Search'/>
         </div></div>
       
       <div className='table'> 
      <table>
       
-      <tr >
+      <tr>
        
-        <th>Patient Name</th>
-        <th>Patient Id</th>
-        <th>Pregnancies</th>
-        <th>Glucose</th>
-        <th>Blood Pressure</th>
-        <th>Skin Thickness</th>
-        <th>Insulin</th>
-        <th>BMI</th>
-        <th>Diabetes Pedigree Function</th>
-        <th>Age</th>
+        <th className='tabletitle'>PatientName</th>
+        <th className='tabletitle'>PatientID</th>
+        <th className='tabletitle'>Pregnancies</th>
+        <th className='tabletitle'>Glucose</th>
+        <th className='tabletitle'>BloodPressure</th>
+        <th className='tabletitle'>SkinThickness</th>
+        <th className='tabletitle'>Insulin</th>
+        <th className='tabletitle'>BMI</th>
+        <th className='tabletitle'>DPF</th>
+        <th className='tabletitle'>Age</th>
       </tr>
       
    

@@ -1,19 +1,14 @@
-/* .dashboard{
-    background-image:url("../assets/dashbackground.jpg") ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-} */
+.dashpage{
+    background-image: url('../assets/dashbackground.jpg');
+    width: 110%;
+}
 .dashnavbar{
     height: 100px;
     width: 100%;
-    /* left: 2rem; */
-    /* top: 15rem; */
-    /* right: 2rem; */
     top: 0;
-    background-color: black;
+    background-image: url("../assets/dashbackground.jpg");
+background-size: cover;
+background-position: center;
 color: white;
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 position: fixed;
@@ -23,23 +18,23 @@ justify-content: space-between;
 padding: 2rem;
 
 }
-.dashnavbar .left{
+.dashnavbar .dashpage-left{
     margin-left: 10rem;
 }
-.dashnavbar .right{
+.dashnavbar .dashpage-right{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
     gap: 1rem;
-    margin-right: 10rem;    
+    margin-right: 5rem;    
 }
-.dashnavbar .icon{
+.dashnavbar .dashpage-icon{
     margin-right: 2px;
     font-size: 1rem;
     margin-top: 2px;    
 }
-.button{
+.dashpage-buton{
     background-color: red;
     color: white;
     display: flex;
@@ -49,8 +44,7 @@ padding: 2rem;
     height: 40px;
     width: 100px;
     margin-top: -7px;
-    /* border: none;
-    padding: 5px 5px; */
+ 
     
     
 }
@@ -61,11 +55,6 @@ padding: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
-    /* margin-top: 100px; */
-    /* padding-bottom: rem; */
-    
     background-color: white;
 color: black;
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -76,7 +65,6 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
     gap: 2.5rem;
 }
 .card .patients{
@@ -148,7 +136,8 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     gap: 1rem;
     margin-left: 10rem;
     margin-right: 10rem;
-    margin-top: 10rem;
+    padding-top: 10rem;
+  
 }
 .charts{
     display: flex;
@@ -159,42 +148,13 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     margin-right: 10rem;
     margin-top: 10rem;
 }
-
-
-
-/* .Orderstitle{
-    display: flex;
-    flex-direction: row;
-    margin-top: 1rem;
-    gap: 40rem;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
-} */
-/* .Orderstitle h2{
-    font-size: 13px;
-    color: black;
-} */
-/* .Orderstitle h3{
-    font-size: 2rem;
-    font-weight: 500;
-    
-} */
-/* .Orderstitle .icon{
-    height: 40px;
-    width: 100px;
-    background-color: rgb(248, 215, 51);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-} */
  .tablehead{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: black;
     font-size: 1.5rem;
-   background-color: blue;
+   /* background-color: blue; */
  }
 .orderspage{
     background-color: white;
@@ -205,30 +165,40 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     z-index: 1;
 }
-.orderspage .search{
+.orderspage .dashsearch{
  height: 30px;
  width: 200px;
- margin-left: 1rem;
- border: 1px solid black;
-
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ border-bottom: 2px solid black;
+ 
 } 
-.search .icon{
-    color: black;
+.dashsearch .icon{
+    color: rgb(152, 147, 147);
 }
-.search input{
-    
+.dashsearch input{
+    border: none;
+    outline: none;
     height: px;
     width: 100px; 
-    background-color: white;
-    border: none;  
+    background-color: white; 
+}
+.dashsearch input::hover{
+    background-color: rgb(28, 77, 120);
 }
 .table{  
-    /* background-color: white; */
     padding: 1rem;
     border-radius: 0.5rem;
-    width: 98%;
+    width: 100%;
     margin-top: 15px;
     
+    
+}
+.tabletitle{
+    background-color: blue;
+    color: white;
+    font-size: 13px;
 }
 table{
     width: 100%;

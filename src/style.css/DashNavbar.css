@@ -1,19 +1,10 @@
-/* .dashboard{
-    background-image:url("../assets/dashbackground.jpg") ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-} */
+/* 
 .dashnavbar{
     height: 100px;
     width: 100%;
-    /* left: 2rem; */
-    /* top: 15rem; */
-    /* right: 2rem; */
+   
     top: 0;
-    background-color: black;
+    background-image: url("../assets/dashbackground.jpg");
 color: white;
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 position: fixed;
@@ -48,9 +39,5 @@ padding: 2rem;
     font-weight: 700;
     height: 40px;
     width: 100px;
-    margin-top: -7px;
-    /* border: none;
-    padding: 5px 5px; */
-    
-    
-}
+    margin-top: -7px;   
+} */

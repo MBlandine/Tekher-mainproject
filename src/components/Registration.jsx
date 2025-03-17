@@ -1,107 +1,88 @@
-// import { useState } from "react";
-// import "../style.css/Registration.css";
-// import { FiX } from "react-icons/fi";
-// import Login from "./Login";
+import React from 'react'
+import '../style.css/Registration.css';
+import { IoHomeSharp } from "react-icons/io5";
+import { BsFillPersonFill } from "react-icons/bs";
+import { FaRobot } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { FcBusinesswoman } from "react-icons/fc";
+import { Link } from 'react-router-dom';
+import { useState } from "react";
 
-// const Registration = ({ closeRegister }) => {
-//   const [username, setUsername] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [confirmPassword, setConfirmPassword] = useState("");
-//   const [errorMessage, setErrorMessage] = useState("");
-//   const [isLoginOpen, setIsLoginOpen] = useState(false); // Control login modal
+const Registration = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  
+  const [errors, setErrors] = useState({});
 
-//   const isPasswordStrong = (password) => {
-//     return (
-//       password.length >= 8 &&
-//       /[A-Z]/.test(password) &&
-//       /[a-z]/.test(password) &&
-//       /\d/.test(password) &&
-//       /[!@#$%^&*]/.test(password)
-//     );
-//   };
+  // Validation function
+  const validate = () => {
+    let newErrors = {};
 
-//   const handleRegistration = (e) => {
-//     e.preventDefault();
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
 
-//     if (!isPasswordStrong(password)) {
-//       setErrorMessage(
-//         "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
-//       );
-//       return;
-//     }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
 
-//     if (password !== confirmPassword) {
-//       setErrorMessage("Passwords do not match!");
-//       return;
-//     }
+    if (!formData.password) {
+      newErrors.password = "Password is required";
+    } else if (formData.password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters";
+    }
 
-//     setErrorMessage("");
-//     console.log("User Registered:", { username, email, password });
-//   };
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Returns true if no errors
+  };
 
-//   return (
-//     <>
-//       {!isLoginOpen && (
-//         <div className="registration-overlay">
-//           <div className="registration-container">
-//             <button className="close-button" onClick={closeRegister}>
-//               <FiX />
-//             </button>
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form submitted successfully!");
+      console.log("Form Data:", formData);
+    }
+  };
 
-//             <div className="registration-card">
-//               <div className="registration-header">
-//                 <img src={logo} alt="Botiga Logo" className="registration-logo" />
-//                 <h2 className="registration-title">Create an account</h2>
-//               </div>
-//               <form className="registration-form" onSubmit={handleRegistration}>
-//                 <input
-//                   type="text"
-//                   className="registration-input"
-//                   placeholder="Username"
-//                   value={username}
-//                   onChange={(e) => setUsername(e.target.value)}
-//                   required
-//                 />
-//                 <input
-//                   type="email"
-//                   className="registration-input"
-//                   placeholder="Email"
-//                   value={email}
-//                   onChange={(e) => setEmail(e.target.value)}
-//                   required
-//                 />
-//                 <input
-//                   type="password"
-//                   className="registration-input"
-//                   placeholder="Password"
-//                   value={password}
-//                   onChange={(e) => setPassword(e.target.value)}
-//                   required
-//                 />
-              
-//                 {errorMessage && <p className="error-message">{errorMessage}</p>}
-//                 <button type="submit" className="registration-button">
-//                   Register
-//                 </button>
-//               </form>
-//               <div className="social-registration">
-              
-//               </div>
-//               <div className="registration-options">
-//                 <span>Already have an account?</span>
-//                 <a className="login-link" onClick={() => setIsLoginOpen(true)}>
-//                   Login
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       )}
 
-//       {isLoginOpen && <Login closeSignin={() => setIsLoginOpen(false)} openRegister={() => setIsLoginOpen(false)} />}
-//     </>
-//   );
-// };
+  return (
+    <div className='registration'>
+        <div className='navbar'>
+            <div className='logo'>NeuralHack</div>
+            <div className='menu'>
+                
+                    <Link to="/Home"><div className='icon'><IoHomeSharp className='iconn' />HOME</div></Link>
+                    <Link to="/Login"><div className='icon'><BsFillPersonFill  className='iconn' />LOGIN/ REGISTER</div></Link>
+                    <Link to="/OneTimeUser"><div className='icon'><BsFillPersonFill className='iconn'/>ONE TIME USER?</div></Link>
+                    <div className='icon'><FaRobot className='iconn'/>AIML GEEKS?</div>
+                
+            </div>
+        </div>
+        <div className='register'>
+        <div className='register-container'>
+            <div className='tittle'>Register</div>
+            <div className='picture'><FcBusinesswoman /></div>
+            <div className='text' onSubmit={handleSubmit}>
+            <div className='icon2'><BsFillPersonFill /><form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+            <div className='icon2'><MdEmail /><form><input type="text" placeholder='Email' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+            <div className='icon2'><RiLockPasswordFill /><form><input type="text" placeholder='Password' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+            
+            </div>
+            <div className='button'>CLICKCLICK!!!</div>
+        </div>
+        </div>
+    </div>
+  )
+}
 
-// export default Registration;
+export default Registration
