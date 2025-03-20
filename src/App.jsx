@@ -5,6 +5,7 @@ import DashNavbar from './Dashboard/DashNavbar.jsx'
 import DashPage from './Dashboard/DashPage.jsx'
 import DashProfile from "./Dashboard/DashProfile.jsx";
 import DashPredict from "./Dashboard/DashPredict.jsx";
+import Update from "./Dashboard/Update.jsx";
 // import Layout from "./components/Layout.jsx";
 import Home from './components/Home.jsx'
 import OneTimeUser from "./components/OneTimeUser.jsx";
@@ -26,7 +27,9 @@ const App = () => {
       <Route path='/DashNavbar' element={<DashNavbar/>}/>
       < Route path='/DashProfile'element={<DashProfile/>}/>
       < Route path='/DashPredict' element={< DashPredict/>}/>
+      < Route path="/Update/:id" element={<Update/>}/>
       <Route path='/DashPage' element={<DashPage/>}>
+      
      
       </Route>
 

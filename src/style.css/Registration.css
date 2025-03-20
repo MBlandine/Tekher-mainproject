@@ -26,12 +26,12 @@
     /* padding: 20px; */
 
 }
-.tittle{
+.register-tittle{
     font-size: 3rem;
     font-weight: 600;
     color: rgb(37, 120, 155) ;
 }
-.text{
+.register-text{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -44,7 +44,7 @@ form{
     margin-bottom: 1rem;
     
 }
-.icon2{
+.register-icon2{
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -64,7 +64,7 @@ label{
     font-size: 2rem;
 
 }
-.picture{
+.register-picture{
     font-size: 100px;
     background-color: aliceblue;
     border-radius: 50%;
@@ -75,14 +75,18 @@ label{
     justify-content: center;
     align-items: center;
 }
-.button{
+.register-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
     background-color:  rgb(37, 120, 155);
     width: 130px;
     height: 40px;
     border-radius: 3px;
 
 }
-.navbar{
+.registernavbar{
     display: flex;
     gap: 30.2rem;
     margin-left: 130px;
@@ -93,16 +97,23 @@ label{
     
 
 }
-.icon{
+.register-icon{
     display: flex;
     flex-direction: row;
     gap: 3px;
+    color: white;
 }
-.iconn{
+.register-iconn{
     font-size: 13px;
 }
-.logo{
+.register-logo{
     font-size: 20px;
     font-weight: 500;
 
 }
+.register-menu{
+    display: flex;
+      flex-direction: row;
+      gap: 20px;
+      font-size: 11px;
+  }

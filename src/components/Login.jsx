@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div className='registration'>
+    <div className='loginpage'>
     <div className='login-navbar'>
         <div className='login-logo'>NeuralHack</div>
         <div className='login-menu'>
@@ -22,16 +22,16 @@ const Login = () => {
             
         </div>
     </div>
-    <div className='register'>
-    <div className='register-container'>
-        <div className='tittle'>Login</div>
-        <div className='picture'><FcBusinessman /></div>
-        <div className='text'>
-        <div className='icon2'><BsFillPersonFill /><form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
-        <div className='icon2'><RiLockPasswordFill /><form><input type="text" placeholder='Password' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+    <div className='login'>
+    <div className='login-container'>
+        <div className='login-tittle'>Login</div>
+        <div className='login-picture'><FcBusinessman /></div>
+        <div className='login-text'>
+        <div className='login-icon2'><BsFillPersonFill /><form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+        <div className='login-icon2'><RiLockPasswordFill /><form><input type="text" placeholder='Password' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
         
         </div>
-        <div className='button'>CLICKCLICK!!!</div>
+        <div className='login-button'>CLICKCLICK!!!</div>
     </div>
     </div>
 </div>

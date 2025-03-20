@@ -57,28 +57,28 @@ const Registration = () => {
 
   return (
     <div className='registration'>
-        <div className='navbar'>
-            <div className='logo'>NeuralHack</div>
-            <div className='menu'>
+        <div className='registernavbar'>
+            <div className='register-logo'>NeuralHack</div>
+            <div className='register-menu'>
                 
-                    <Link to="/Home"><div className='icon'><IoHomeSharp className='iconn' />HOME</div></Link>
-                    <Link to="/Login"><div className='icon'><BsFillPersonFill  className='iconn' />LOGIN/ REGISTER</div></Link>
-                    <Link to="/OneTimeUser"><div className='icon'><BsFillPersonFill className='iconn'/>ONE TIME USER?</div></Link>
+                    <Link to="/Home"><div className='register-icon'><IoHomeSharp className='iconn' />HOME</div></Link>
+                    <Link to="/Login"><div className='register-icon'><BsFillPersonFill  className='iconn' />LOGIN/ REGISTER</div></Link>
+                    <Link to="/OneTimeUser"><div className='register-icon'><BsFillPersonFill className='iconn'/>ONE TIME USER?</div></Link>
                     <div className='icon'><FaRobot className='iconn'/>AIML GEEKS?</div>
                 
             </div>
         </div>
         <div className='register'>
         <div className='register-container'>
-            <div className='tittle'>Register</div>
-            <div className='picture'><FcBusinesswoman /></div>
-            <div className='text' onSubmit={handleSubmit}>
-            <div className='icon2'><BsFillPersonFill /><form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
-            <div className='icon2'><MdEmail /><form><input type="text" placeholder='Email' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
-            <div className='icon2'><RiLockPasswordFill /><form><input type="text" placeholder='Password' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+            <div className='register-tittle'>Register</div>
+            <div className='register-picture'><FcBusinesswoman /></div>
+            <div className='register-text' onSubmit={handleSubmit}>
+            <div className='register-icon2'><BsFillPersonFill /><form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+            <div className='register-icon2'><MdEmail /><form><input type="text" placeholder='Email' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
+            <div className='register-icon2'><RiLockPasswordFill /><form><input type="text" placeholder='Password' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
             
             </div>
-            <div className='button'>CLICKCLICK!!!</div>
+            <div className='register-button'>CLICKCLICK!!!</div>
         </div>
         </div>
     </div>
