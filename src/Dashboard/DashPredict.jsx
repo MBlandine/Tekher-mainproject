@@ -104,8 +104,8 @@ const navigate = useNavigate();
         <div className='predict-left'>Welcome, Username</div>
         <div className='predict-right'>
         <li className='predict-item'><MdDashboard className='predicticon'/>DASHBOARD</li>
-        <Link to="/DashPredict"><li className='predict-item'><CgMenuGridR className='predicticon'/>OTHERS <IoMdArrowDropdown /></li></Link>
-        <li className='predict-buton'><BsFillPersonFill />LOGOUT</li>
+        <Link to="/Registration"><li className='predict-item'><CgMenuGridR className='predicticon'/>OTHERS <IoMdArrowDropdown /></li></Link>
+        <Link to="/Home"><li className='predict-buton'><BsFillPersonFill />LOGOUT</li></Link>
         </div>
         </div>
 

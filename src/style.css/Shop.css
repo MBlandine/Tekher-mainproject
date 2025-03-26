@@ -1,0 +1,231 @@
+/* .indexhome{
+    background-color: white;
+    color: black;
+    position: relative;
+    
+    
+}
+.shop{
+position: absolute;
+top: 7rem;
+left: 5rem;
+font-size: 3.5rem;
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height: 10rem;
+}
+.indexhome img{
+    width: 100%;
+    height: auto;
+    
+}
+.cards{
+display: flex;
+width: 100%;
+
+background-color: white;
+}
+.words{
+ width: 20%;
+ list-style: none;
+ margin-left: 4rem;
+ color: black;
+}
+
+.color-options {
+    display: flex;
+    
+    margin-top: 1rem;
+    margin-left: -3rem;
+    margin-bottom: 1rem;
+}
+
+.color-circle {
+    width: 2rem;
+    height: 2rem;
+}
+
+.color {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+.ratings {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rating-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+hr {
+    border: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.price-range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.2rem;
+    background: black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.price-box {
+    width: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-right: 9rem;
+}
+
+.top-bar {
+    display: flex;
+
+    align-items: center;
+    margin-bottom: 4rem;
+    height: 6rem;
+    border-bottom: 1px solid rgba(122, 121, 121, 0.781);
+}
+
+.sort-dropdown {
+    padding: 5px;
+    font-size: 0.9rem;
+    margin-left: 30rem;
+}
+.top-bar .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin-left: 30px;
+}
+
+.newcards {
+    
+
+
+  }
+  .card-images {
+    
+    width: 60%;
+    height: 250px;
+ }
+  
+  .card-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-card:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .heart {
+
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+
+  }
+  .heart :hover{
+    color: red;  
+  }
+  
+  .product-card:hover .heart {
+    display: block;
+  }
+  
+  .select-option {
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(27, 27, 27);
+    font-weight: bold;
+    cursor: pointer;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  .quick-view {
+    color: white;
+    margin-top: 3.8rem;
+    margin-bottom: -6rem;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(27, 27, 27);
+    font-weight: bold;
+    cursor: pointer;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  .select-option:hover, .quick-view:hover {
+    background: rgba(119, 119, 119, 0.9);
+  }
+  
+  .card-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+  }
+  
+  
+  .price {
+    color: #333;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    
+  }
+  
+  .stars {
+    color: gold;
+  
+    font-size: 2rem;
+   
+  
+  }
+  
+  .color-options {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    
+  }
+  
+  .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #ddd;
+  }
+ */

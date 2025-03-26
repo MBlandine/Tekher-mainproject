@@ -1,5 +1,8 @@
-import React from 'react'
-import '../style.css/Home.css'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import '../style.css/Home.css';
+
+
 import { IoHomeSharp } from "react-icons/io5";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaRobot } from "react-icons/fa";
@@ -10,17 +13,35 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { Link } from 'react-router-dom';
+import { MdLocalHospital } from "react-icons/md";
 const Home = () =>{ 
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_dfq46y7', 'template_pakk5fb', form.current, '1IHU8lDVIAoVlFcGw')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+      e.target.reset()
+  };
   return (
     <div className='All'>
     <div className='home'>
         <div className='home-navbar'>
-            <div className='home-logo'>NeuralHack</div>
+            <Link to="/Home"><div className='home-logo'>NeuralHack</div></Link>
             <div className='home-menu'>
                 
                    <Link to= "/Home"> <div className='home-icon'><IoHomeSharp className='home-iconn' />HOME</div></Link>
-                    <Link to="/Login"><div className='home-icon'><BsFillPersonFill  className='home-iconn' />LOGIN/ REGISTER</div></Link>
-                    <Link to="/OneTimeUser"><div className='home-icon'><BsFillPersonFill className='home-iconn'/>ONE TIME USER?</div></Link>
+                    <Link to="/Registration"><div className='home-icon'><BsFillPersonFill  className='home-iconn' />LOGIN/ REGISTER</div></Link>
+                    <Link to="/DiabetesPrediction"><div className='home-icon'><BsFillPersonFill className='home-iconn'/>ONE TIME USER?</div></Link>
                     <div className='icon'><FaRobot className='home-iconn'/>AIML GEEKS?</div>
                 
             </div>
@@ -32,21 +53,58 @@ const Home = () =>{
         </div>
            
     </div>
+<div className="white">
+  <div className='lettalkproduct'>
+    <diV className='lettalkproduct-upper'>
+      <div className='lettalkproduct-uppertitle'>Let's talk product.</div>
+      <div className='lettalkproduct-uppertext'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product, first launched in 2020. Designed to bridge the gap between cutting-edge AI and seamless user experience, our solution empowers users with intelligent insights while maintaining ease of use.
 
+Over the years, we have refined our technology to ensure accuracy, efficiency, and adaptability.</div>
+    </diV>
+    <div className='lettalkproduct-down'>
+      <div className='down-one'>
+        <div className='icon'>< MdLocalHospital/></div>
+        <div className='accurate'>Accurate</div>
+        <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
+      </div>
+      <div className='down-one'>
+        <div className='icon'>< MdLocalHospital/></div>
+        <div className='accurate'>Accurate</div>
+        <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
+      </div>
+      <div className='down-one'>
+        <div className='icon'>< MdLocalHospital/></div>
+        <div className='accurate'>Accurate</div>
+        <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
+      </div>
+      <div className='down-one'>
+        <div className='icon'>< MdLocalHospital/></div>
+        <div className='accurate'>Accurate</div>
+        <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
+      </div>
+    </div>
+  </div>
+  <section>
     <div className='contact'>
       <div className='contact-title'>Contact Us</div>
       <div className='contact-subtitle'>Want to get in touch? We'd love to hear from you. Here's how you can reach us...</div>
       <div className='contact-leftright'>
-      <div className='contact-left'>
-      <div  className='contact-useremail'>
-        <form><input type="text" placeholder='Username' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form>
-        <form><input type="text" placeholder='Email' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form>
+    
+     <form className='contact-left' ref={form} onSubmit={sendEmail}>
+      <div className='contact-useremail'>
+      <div className="contact-form">
+      <input type="text" name="user_name" placeholder="Name" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed." autocomplete="name"/>
+    </div>
+    <div className="contact-form">
+      <input type="email" name="user_email" placeholder="Email" required autocomplete="email"/>
+    </div>
       </div>
       
-      <div  className='message'><form><input type="text-area" placeholder='Message' required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed."></input></form></div>
-      <div className='contact-button'>SEND MESSAGE</div>
-      </div>
-      <div className='contact-right'>
+      <div className='contact-formmessage'><div>Message</div><textarea name="message"  required></textarea></div>
+      <div className='contact-button'><button type="submit">SEND MESSAGE</button></div>
+      </form>
+    
+    <div className='contact-right'>
         <div className='contact-icons'>
           <div  className='icon3'><FaQuestionCircle className='iconic' />FAQ</div>
           <div className='icon3'><div><FaLocationDot  className='iconic'/></div><div>LOCATION</div></div>
@@ -74,7 +132,10 @@ const Home = () =>{
       </div>
       </div>
     </div>
+    </section> 
+    </div> 
     </div>
+   
 
     
   )

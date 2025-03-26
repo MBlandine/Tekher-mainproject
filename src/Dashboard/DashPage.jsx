@@ -126,17 +126,17 @@ const handleDelete = async (id) => {
   return (
     <div className='dashpage'>
       {/* Navbar Section */}
-      {/* <div className='dashnavbar'>
+      <div className='dashnavbar'>
         <div className='dashpage-left'>Welcome, Username</div>
         <div className='dashpage-right'>
           <li className='item'><MdDashboard className='dashpage-icon'/>DASHBOARD</li>
           <Link to="/DashPredict"><li className='item'><CgMenuGridR className='dashpage-icon'/>OTHERS <IoMdArrowDropdown /></li></Link>
           <li className='dashpage-button'><BsFillPersonFill />LOGOUT</li>
         </div>
-      </div> */}
+      </div>
 
       {/* Cards Section */}
-      {/* <div className='cardcontainer'>
+      <div className='cardcontainer'>
         <div className='card'>
           <div className='cardcontent'>
             <div className='patients'>{users.length} Patients</div>
@@ -144,7 +144,7 @@ const handleDelete = async (id) => {
           </div> 
           <div className='smallcard1'><FaWheelchair className='icon'/> Patients Analysed</div>
         </div>
-      </div> */}
+      </div>
 
       {/* Table Section */}
       <div className='table'>

@@ -1,0 +1,208 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    
+    width: 20rem;
+    height: 170vh;
+    z-index: 1;
+    background-color: white;
+   
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem;
+    margin-left: 2rem;
+    padding-bottom: 0.5rem;
+    
+    
+}
+.logo .icon{
+    font-size:3rem ;
+    color: rgb(124, 147, 160);
+}
+.sidebar h1{
+ font-size: 20px;
+ font-weight: 500;
+ color:rgb(54, 10, 129) ;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    border: 0.5px solid rgb(237, 236, 236);
+    border-radius: 5px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 18rem;
+    height: 3rem;
+    color: rgb(86, 114, 135);
+    margin-left: -3rem;
+    
+}
+ .items{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(87, 11, 220);
+    
+    height: 3rem;
+    color: white;
+    margin-left: -3rem; 
+}
+.item:hover{
+    border-radius: 15px;
+    background-color: rgb(235, 246, 252);
+    color: rgb(87, 11, 220) ;
+}
+.list h1{
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(86, 114, 135);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+.list .icon{
+    margin-left: 3rem;
+
+}
+.iconic{
+    font-size: 20px;
+    color: rgb(86, 114, 135);
+    margin-left: 3rem;
+
+}
+
+
+.lightanddark {
+    width: 12rem;
+    background-color: rgba(29, 28, 29, 0.712);
+    bottom: 5rem; 
+    z-index: 4000;
+    margin-top: 2rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    color: #8bafd3c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.icons {
+    font-size: 1.5rem;
+    
+}
+
+.dark .icons {
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
+    color: #f6f5f5;
+}
+.light .icons{
+    font-size: 2rem;
+    transition: color 0.3s ease-in-out;
+    color: black;
+}
+
+.lightanddark .icons.active {
+    color: rgb(76, 0, 255);
+}
+
+body.dark-theme .dashboard h3{
+    color: #fff;
+}
+body.dark-theme .dashboard .iconn{
+    color: rgb(86, 114, 135);
+}
+.dark-theme .dashboard .icon{
+    color:#fff;
+}
+.dark-theme .dashboard .item{
+    background-color: rgb(76, 0, 255);
+    color: #fff;
+}
+.dark-theme .dashboard{
+    border: 0.5px solid rgb(82, 81, 81);
+}
+.dark-theme .list{
+   
+    border: 0.5px solid rgb(82, 81, 81);
+}
+body.dark-theme .logo{
+    -webkit-text-fill-color:rgb(76, 0, 255) ;
+}
+
+
+body.dark-theme .sidebar,
+body.dark-theme .dashboard{
+    background-color:rgb(46, 54, 61);
+    color: white;
+}
+body.dark-theme .item {
+    background-color: rgb(46, 54, 61);
+    color: rgb(124, 147, 160);
+}
+
+body.dark-theme .sidebar .item:hover {
+    background-color: #ffffff;
+    color: rgb(76, 0, 255);
+}
+.dark-theme .admindash{
+    background-color: #242424;
+}
+body.dark-theme .admindash h2{
+    color:  rgb(124, 147, 160);
+}
+body.dark-theme .cards{
+    background-color: #242424;
+}
+
+.dark-theme .cardpage{
+    background-color: #242424;
+    height: 140vh;
+    gap: 10px;
+}
+
+.dark-theme .card{
+    box-shadow: 0px 4px 6px rgba(246, 245, 245, 0.1);
+    background-color: rgb(46, 54, 61);
+}
+.dark-theme .number h4{
+    color: white;
+}
+.dark-theme .number h3{
+    color: white;
+}
+
+
+/* Light Theme Styles */
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #242424;
+}
+
+body.light-theme .topbar,
+body.light-theme .sidebar {
+    background-color: #fff;
+}
+
+body.light-theme .sidebar ul li:hover {
+    background-color: #e0e0e0;
+    color: rgb(76, 0, 255);
+}
+body.light-theme .lightanddark{
+    background-color: rgba(29, 28, 29, 0.18);
+}
+
+  

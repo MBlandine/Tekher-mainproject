@@ -1,0 +1,72 @@
+/* 
+.Orderstitle{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 40rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+.Orderstitle h2{
+    font-size: 13px;
+    color: rgb(124, 125, 126);
+}
+.Orderstitle h3{
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+.Orderstitle .icon{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(248, 215, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.orderspage{
+    background-color: white;
+    height: 100vh;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 3px;
+    z-index: 1;
+}
+.orderspage .search{
+ height: 30px;
+ width: 830px;
+ margin-left: 1rem;
+ border: 1px solid ;
+
+} 
+.search input{
+    
+    height: 30px;
+    width: 400px;   
+}
+.table{  
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 98%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, 
+td{
+    padding: 0.75rem;
+    text-align: left;
+    justify-content: left; 
+    color: gray;
+}
+th{
+    background-color: white;
+}
+tr:nth-child(even){
+    background: #f9f9f9;
+}
+ */
