@@ -69,6 +69,8 @@ const Registration = () => {
         </div>
       </div>
 
+      <div className='signup-both'>
+      <Link to="/Login"><div className='signup-black'>LOGIN</div></Link>
       <div className='register'>
         <div className='register-container'>
           <div className='register-tittle'>Register</div>
@@ -111,6 +113,7 @@ const Registration = () => {
             <button type="submit" className='register-button'>Register</button>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );

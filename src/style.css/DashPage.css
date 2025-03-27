@@ -1,8 +1,14 @@
 .dashpage{
     background-image: url('../assets/dashbackground.jpg');
-    width: 110%;
+    width: 216vh;
+    height: 240vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-size: cover; */
+/* background-position: center; */
 }
-.dashnavbar{
+.dashnavbar-dashpage{
     height: 80px;
     width: 100%;
     top: 0;
@@ -15,13 +21,14 @@ position: fixed;
 z-index: 100;
 display: flex;
 justify-content: space-between;
-padding: 2rem;
+align-items: center;
+/* padding: 2rem; */
 
 }
-.dashnavbar .dashpage-left{
+.dashnavbar-dashpage .dashpage-left{
     margin-left: 10rem;
 }
-.dashnavbar .dashpage-right{
+.dashnavbar-dashpage .dashpage-right{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,12 +36,15 @@ padding: 2rem;
     gap: 1rem;
     margin-right: 5rem;    
 }
-.dashnavbar .dashpage-icon{
+.dashnavbar-dashpage .dashpage-icon{
     margin-right: 2px;
     font-size: 1rem;
     margin-top: 2px;    
 }
-.dashpage-buton{
+.item-dashpage{
+    color: white;
+}
+.dashpage-button{
     background-color: red;
     color: white;
     display: flex;
@@ -48,7 +58,14 @@ padding: 2rem;
     
     
 }
-.card{
+.cards-dashpage{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+.card-dashpage{
     height:240px ;
     width: 270px;
     display: flex;
@@ -60,20 +77,20 @@ color: black;
 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 
 }
-.card .cardcontent{
+.card-dashpage .cardcontent-dashpage{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
 }
-.card .patients{
+.card-dashpage .patients-dashpage{
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: rem;
 }
 
-.smallcard1{
+.smallcard1-dashpage{
     height: 110px;
     width: 180px;
     margin-right: 15px;
@@ -88,10 +105,10 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     color: white;
     background-color: rgb(71, 151, 222);
 }
-.smallcard1 .icon{
+.smallcard1-dashpage .icon-dashpage{
     font-size: 2rem;
 }
-.smallcard2{
+.smallcard2-dashpage{
     height: 110px;
     width: 180px;
     margin-right: 15px;
@@ -106,11 +123,11 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     color: white;
     background-color: rgb(86, 133, 16);
 }
-.smallcard2 .icon{
+.smallcard2-dashpage .icon-dashpage{
     font-size: 2rem;
 }
 
-.smallcard3{
+.smallcard3-dashpage{
     height: 110px;
     width: 180px;
     margin-right: 15px;
@@ -125,17 +142,18 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     color: white;
     background-color: rgb(199, 21, 21);
 }
-.smallcard3 .icon{
+.smallcard3-dashpage .icon-dashpage{
     font-size: 2rem;
 }
 
-.cardcontainer{
+.cardcontainer-dashpage{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;justify-content: center;
+    /* justify-content: space-between; */
     gap: 1rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    /* margin-left: 10rem; */
+    /* margin-right: 10rem; */
     padding-top: 10rem;
   
 }
@@ -148,63 +166,120 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     margin-right: 10rem;
     margin-top: 10rem;
 }
- .tablehead{
+.dashsearch-dashpage{
+ height: 30px;
+ /* width: 200px; */
+ display: flex;
+ /* flex-direction: row; */
+ /* align-items: center; */
+ border-bottom: 2px solid black;
+ /* background-color: red; */
+ 
+} 
+.dashsearch-dashpage .icon-dashpage{
+    color: rgb(152, 147, 147);
+}
+.dashsearch-dashpage input{
+    border: none;
+    outline: none;
+    /* height: 30px; */
+    width: 200px; 
+    /* background-color: red; */
+    
+    /* border-bottom: 2px solid black;  */
+}
+.dashsearch-dashpage input::hover{
+    background-color: rgb(28, 77, 120);
+}
+.tablehead-dashpage{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    /* gap:30.8rem; */
+    
     color: black;
     font-size: 1.5rem;
    /* background-color: blue; */
+   width: 169vh;
+   height: 70px;
+   margin-left: 2rem;
  }
-.orderspage{
-    background-color: white;
-    height: 100vh;
-    padding: 1rem;
-    margin-left: 143px;
-    margin-right: 120px;
-    border-radius: 3px;
-    z-index: 1;
-}
-.orderspage .dashsearch{
- height: 30px;
- width: 200px;
- display: flex;
- flex-direction: row;
- align-items: center;
- border-bottom: 2px solid black;
- 
-} 
-.dashsearch .icon{
-    color: rgb(152, 147, 147);
-}
-.dashsearch input{
-    border: none;
-    outline: none;
-    height: px;
-    width: 100px; 
-    background-color: white; 
-}
-.dashsearch input::hover{
-    background-color: rgb(28, 77, 120);
-}
-.table{  
-    padding: 1rem;
-    border-radius: 0.5rem;
-    width: 100%;
-    margin-top: 15px;
-    
-    
-}
-.tabletitle{
-    background-color: blue;
+ tr .tabletitle-dashpage{
+  
+
+/* display: flex; */
+/* flex-direction: row; */
+/* align-items: center; */
+/* justify-content: center; */
+    height: 40px;
+    padding-right: 1rem;
+    /* width: 18vh; */
+    /* margin-left: 4rem; */
+    /* padding-left: 1rem; */
+    /* background-color: blue; */
     color: white;
     font-size: 13px;
+    background-color: rgb(71, 151, 222);
+    
 }
+.tabletitle-dashpage1{
+    background-color: rgb(71, 151, 222);
+    color: white;
+    /* padding-left: 3rem; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+}
+.table-dashpage{ 
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+   
+  
+    margin-top: 1rem;
+    background-color: white;
+    /* height: 100vh; */
+    width: 190vh;
+    
+
+   
+    /* padding-left: 1rem; */
+/*     
+    margin-left: 2rem;
+    margin-right: 2rem; */
+    /* margin-right: 120px; */
+    border-radius: 3px;
+    z-index: 1;
+    
+    
+}
+
 table{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 180vh;
+    /* gap: 15px; */
+    margin-left: 2rem;
+    /* background-color: red; */
     border-collapse: collapse;
     
   
+}
+.action-update{
+    background-color: rgb(71, 151, 222);
+    height: 40px;
+    width: 80px;
+    border-radius: 0;
+}
+.action-delete{
+    background-color: rgb(71, 151, 222);
+    height: 40px;
+    width: 80px;
+    border-radius: 0;
 }
 
 
@@ -226,8 +301,101 @@ td{
 th{
     background-color: white;
 }
+.patient-item{
+    /* background: blue; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 35px; */
+    justify-content: space-between;
+    
+}
+.patient-item1{
+    width: 70px;
+    /* background-color: #8a3434; */
+    /* margin-right: 2rem; */
+}
+
+.patient-item3{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* width: 40px; */
+    /* background-color: #8a3434; */
+    /* margin-left: 1rem; */
+    /* margin-right: 1rem; */
+}
+
+.patient-item4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    /* background-color: #8a3434; */
+    /* margin-right: 1rem; */
+    /* margin-left: 1rem; */
+}
+
+.patient-item5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 40px; */
+    /* background-color: #8a3434; */
+    margin-right: 10px;
+}
+
+
+.patient-item6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    /* background-color: #8a3434; */
+    padding-left: rem;
+    margin-right: -5rem;
+}
+
+
+.patient-item7{
+    width: 40px;
+    /* background-color: #8a3434; */
+    margin-right: -7rem;
+    margin-left:5rem ;
+}
+
+.patient-item8{
+    /* width: 40px; */
+    /* background-color: #8a3434; */
+    margin-left: 4rem;
+    margin-right: -4rem;
+}
+
+.patient-item9{
+    /* width: 40px; */
+    /* background-color: #8a3434; */
+    margin-right: -2rem;
+    margin-left: 2rem;
+}
+/*
+.patient-item10{
+    width: 40px;
+    background-color: #8a3434;
+    margin-right: 1rem;
+} */
+.patient-list {
+   
+    gap: px; /* Adjust spacing between patients */
+  }
+  
 tr:nth-child(even){
     background: #f9f9f9;
+    /* background: #8a3434; */
+    height: 70px;
 }
 
 

@@ -126,99 +126,95 @@ const handleDelete = async (id) => {
   return (
     <div className='dashpage'>
       {/* Navbar Section */}
-      <div className='dashnavbar'>
-        <div className='dashpage-left'>Welcome, Username</div>
+      <div className='dashnavbar-dashpage'>
+        <div className='dashpage-left'>WELCOME,</div>
         <div className='dashpage-right'>
-          <li className='item'><MdDashboard className='dashpage-icon'/>DASHBOARD</li>
-          <Link to="/DashPredict"><li className='item'><CgMenuGridR className='dashpage-icon'/>OTHERS <IoMdArrowDropdown /></li></Link>
-          <li className='dashpage-button'><BsFillPersonFill />LOGOUT</li>
+          <li className='item-dashpage'><MdDashboard className='dashpage-icon'/>DASHBOARD</li>
+          <Link to="/DashPredict"><li className='item-dashpage'><CgMenuGridR className='dashpage-icon'/>OTHERS <IoMdArrowDropdown /></li></Link>
+          <Link to="/Home"><li className='dashpage-button'><BsFillPersonFill />LOGOUT</li></Link>
+          {/* <li><button className='dashpage-button' ><BsFillPersonFill />LOGOUT</button></li> */}
         </div>
       </div>
 
       {/* Cards Section */}
-      <div className='cardcontainer'>
-        <div className='card'>
-          <div className='cardcontent'>
-            <div className='patients'>{users.length} Patients</div>
+      <div className='cards-dashpage'>
+      <div className='cardcontainer-dashpage'>
+        <div className='card-dashpage'>
+          <div className='cardcontent-dashpage'>
+            <div className='patients-dashpage'>{users.length} Patients</div>
             <div>Total Number of Patients Analysed</div>
           </div> 
-          <div className='smallcard1'><FaWheelchair className='icon'/> Patients Analysed</div>
+          <div className='smallcard1-dashpage'><FaWheelchair className='icon-dashpage'/> Patients Analysed</div>
         </div>
+      </div>
+      <div className='cardcontainer-dashpage'>
+        <div className='card-dashpage'>
+          <div className='cardcontent-dashpage'>
+            <div className='patients-dashpage'>SVM</div>
+            <div>Model : 77% ACCURACY</div>
+          </div> 
+          <div className='smallcard2-dashpage'><FaWheelchair className='icon-dashpage'/> Patients Analysed</div>
+        </div>
+      </div>
+      <div className='cardcontainer-dashpage'>
+        <div className='card-dashpage'>
+          <div className='cardcontent-dashpage'>
+            <div className='patients-dashpage'>Decision Tree</div>
+            <div>Model : 75% ACCURACY</div>
+          </div> 
+          <div className='smallcard3-dashpage'><FaWheelchair className='icon-dashpage'/> Patients Analysed</div>
+        </div>
+      </div>
       </div>
 
       {/* Table Section */}
-      <div className='table'>
-        <div className='orderspage'>
-          <div className='tablehead'>
+      <div className='table-dashpage'>
+        <div className='orderspage-dashpage'>
+          <div className='tablehead-dashpage'>
             <div>PATIENTS DATA HISTORY</div>
-            <div className='dashsearch'> 
-              <IoMdSearch className='icon' /> 
+            <div className='dashsearch-dashpage'> 
+              <IoMdSearch className='icon-dashpage' /> 
               <input type='search' placeholder='Search'/>
             </div>
           </div>
 
-          <div className='table'>
+          <div className='table-dashpage'>
             <table>
               <thead>
-                <tr>
-                  <th className='tabletitle'>Patient Name</th>
-                  <th className='tabletitle'>Patient ID</th>
-                  <th className='tabletitle'>Pregnancies</th>
-                  <th className='tabletitle'>Glucose</th>
-                  <th className='tabletitle'>Blood Pressure</th>
-                  <th className='tabletitle'>Skin Thickness</th>
-                  <th className='tabletitle'>Insulin</th>
-                  <th className='tabletitle'>BMI</th>
-                  <th className='tabletitle'>DPF</th>
-                  <th className='tabletitle'>Age</th>
-                  <th>Action</th>
+                <tr className='patient-items'>
+                  <th className='tabletitle-dashpage'>Patient Name</th>
+                  <th className='tabletitle-dashpage'>Patient ID</th>
+                  <th className='tabletitle-dashpage'>Pregnancies</th>
+                  <th className='tabletitle-dashpage'>Glucose</th>
+                  <th className='tabletitle-dashpage'>Blood Pressure</th>
+                  <th className='tabletitle-dashpage'>Skin Thickness</th>
+                  <th className='tabletitle-dashpage'>Insulin</th>
+                  <th className='tabletitle-dashpage'>BMI</th>
+                  <th className='tabletitle-dashpage'>DPF</th>
+                  <th className='tabletitle-dashpage'>Age</th>
+                  <th className='tabletitle-dashpage1'>Action</th>
                 </tr>
               </thead>
-
-              {/* <tbody>
-             {
-              users.map((el, index)=>{
-             return(
-              <tr key={el.id || index}>
-                 <td>{el.patientName}</td>  
-                 <td>{el.patientID}</td>
-                 <td>{el.pregnancies}</td>
-                 <td>{el.glucose}</td>
-                 <td>{el.bloodpressure}</td>
-                 <td>{el.skinthickness}</td> 
-                 <td>{el.insulin}</td>
-                 <td>{el.BMI}</td> 
-                 <td>{el.DPF}</td> 
-                 <td>{el.age}</td>
-                 <td>
-                    <Link to="/DashPredict"><button>Edit</button></Link>
-                    <button onClick={() => handleDelete(el._id)}>Delete</button>
-                 </td>
-              </tr>
-             )
-              })
-             }
-              </tbody> */}
 
 
 <tbody>
   {users.map((el, index) => (
-    <tr key={el._id || index}>
-      <td>{el.patientName}</td>
-      <td>{el.patientID}</td>
-      <td>{el.pregnancies}</td>
-      <td>{el.glucose}</td>
-      <td>{el.bloodpressure}</td>
-      <td>{el.skinthickness}</td>
-      <td>{el.insulin}</td>
-      <td>{el.BMI}</td>
-      <td>{el.DPF}</td>
-      <td>{el.age}</td>
-      <td>
+    <tr key={el._id || index} className='patient-item'>
+      <td className='patient-item1'>{el.patientName}</td>
+      <td className='patient-item2'>{el.patientID}</td>
+      <td className='patient-item3'>{el.pregnancies}</td>
+      <td className='patient-item4'>{el.glucose}</td>
+      <td className='patient-item5'>{el.bloodpressure}</td>
+      <td className='patient-item6'>{el.skinthickness}</td>
+      <td className='patient-item7'>{el.insulin}</td>
+      <td className='patient-item8'>{el.BMI}</td>
+      <td className='patient-item9'>{el.DPF}</td>
+      <td className='patient-item10'>{el.age}</td>
+      <td >
         <Link to={`/update/${el._id}`}>
-          <button>Edit</button>
+          <button className='action-update'>Edit</button>
         </Link>
-        <button   onClick={(e) => {e.stopPropagation(); // Prevent the row click event from firing
+        <button className='action-delete' style={{ marginLeft: "5px" }}  onClick={(e) => {e.stopPropagation(); // Prevent the row click event from firing
                  handleDelete(el._id); // Pass the _id for deletion
                 }}>Delete</button>
       </td>

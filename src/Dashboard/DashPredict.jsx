@@ -101,7 +101,7 @@ const navigate = useNavigate();
   return (
     <div className='dashpredict'>
         <div className='predictnavbar'>
-        <div className='predict-left'>Welcome, Username</div>
+        <div className='predict-left'>WELCOME,</div>
         <div className='predict-right'>
         <li className='predict-item'><MdDashboard className='predicticon'/>DASHBOARD</li>
         <Link to="/Registration"><li className='predict-item'><CgMenuGridR className='predicticon'/>OTHERS <IoMdArrowDropdown /></li></Link>
@@ -127,23 +127,25 @@ const navigate = useNavigate();
             <div className='predict-bottom'>
                 <div className='predict-title'>Please provide the required data of the patient</div>
                 <form className='predict-middle' onSubmit={Submit}>
+                 <div className='predict-leftright'>   
                 <div className='predict-leftside'>
-                <div className='predict-form'> <div>Patient Name </div><div><input type="text" id='Patient Name' name='Patient Name'required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed." onChange={(e)=>setpatientName(e.target.value)}/></div></div>
-                <div className='predict-form'> <div>Pregnancies </div><div><input type="number" id='Pregnancies' name='Pregnancies'required min="0" onChange={(e)=>setpregnancies(e.target.value)}/></div></div>
-                <div className='predict-form'> <div><label className='predict-label'  htmlFor='Blood Pressure'>Blood Pressure</label> </div><div><input type="number" name='Blood Pressure' id='Blood Pressure'required min="0"onChange={(e)=>setbloodpressure(e.target.value)}/></div></div>
-                <div className='predict-form'> <div>Insulin </div><div><input type="number" name="id" id='Insulin'required min="0"onChange={(e)=>setinsulin(e.target.value)}/></div></div>
-                <div className='predict-form'> <div>DPF </div><div><input type="number" name="DP" id='DPF' required min="0" onChange={(e)=>setDPF(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div>Patient Name </div><div><input type="text" id='Patient Name' name='Patient Name'required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed." onChange={(e)=>setpatientName(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div>Pregnancies </div><div><input type="number" id='Pregnancies' name='Pregnancies'required min="0" onChange={(e)=>setpregnancies(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div><label className='predict-label'  htmlFor='Blood Pressure'>Blood Pressure</label> </div><div><input type="number" name='Blood Pressure' id='Blood Pressure'required min="0"onChange={(e)=>setbloodpressure(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div>Insulin </div><div><input type="number" name="id" id='Insulin'required min="0"onChange={(e)=>setinsulin(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div>DPF </div><div><input type="number" name="DP" id='DPF' required min="0" onChange={(e)=>setDPF(e.target.value)}/></div></div>
                 </div>
                 <div className='predict-rightside'>
                 
-                <div className='predict-form'> <div>Patient Id </div><div><input type="text" name='Patient Id' id='Patient Id'required min="0" onChange={(e)=>setpatientID(e.target.value)}/></div></div>
-                <div className='predict-form'> <div>Glucose </div><div><input type="number" name='Glucose' id='Glucose'required min="0"onChange={(e)=>setglucose(e.target.value)}/></div></div>
-                <div className='predict-form'> <div><label className='predict-label'  htmlFor='Skin Thickness'>Skin Thickness</label> </div><div><input type="number" name='Skin Thickness' id='Skin Thickness'required min="0" onChange={(e)=>setskinthickness(e.target.value)}/></div></div>
-                <div className='predict-form'> <div> BMI </div><div><input type="number" name='BMI' id='BMI'required min="0" onChange={(e)=>setBMI(e.target.value)}/></div></div>
-                <div className='predict-form'> <div> Age </div><div><input type="number" name='Age' id='Age'required min="0" onChange={(e)=>setage(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div>Patient Id </div><div><input type="text" name='Patient Id' id='Patient Id'required min="0" onChange={(e)=>setpatientID(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div>Glucose </div><div><input type="number" name='Glucose' id='Glucose'required min="0"onChange={(e)=>setglucose(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div><label className='predict-label'  htmlFor='Skin Thickness'>Skin Thickness</label> </div><div><input type="number" name='Skin Thickness' id='Skin Thickness'required min="0" onChange={(e)=>setskinthickness(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div> BMI </div><div><input type="number" name='BMI' id='BMI'required min="0" onChange={(e)=>setBMI(e.target.value)}/></div></div>
+                <div className='predict-form-dashpredict'> <div> Age </div><div><input type="number" name='Age' id='Age'required min="0" onChange={(e)=>setage(e.target.value)}/></div></div>
+                </div>
                 </div>
                
-                <div className='predict-buttonn'><button type='Submit'>CLICKCLICK!!!</button></div>
+                <div><button className='predict-buttonn' type='Submit'>CLICKCLICK!!!</button></div>
                 </form>
             </div>
         </div>

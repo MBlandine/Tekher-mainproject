@@ -48,7 +48,7 @@ const Login = () => {
       alert("Login Successful");
 
       // Redirect to dashboard after successful login
-      navigate('/dashboard');
+      navigate('/DashPage');
     } catch (error) {
       // Handling errors from the backend
       console.error("Login Error: ", error);
@@ -75,6 +75,7 @@ const Login = () => {
         </div>
       </div>
 
+      <div className='login-both'>
       <div className='login'>
         <div className='login-container'>
           <div className='login-tittle'>Login</div>
@@ -111,6 +112,8 @@ const Login = () => {
             <button type="submit" className='login-button'>LOGIN</button>
           </form>
         </div>
+      </div>
+      <Link to="/Registration"><div className='login-black'>Register</div></Link>
       </div>
     </div>
   );

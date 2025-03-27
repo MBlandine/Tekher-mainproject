@@ -73,7 +73,7 @@
 }
 .white{
     background: white;
-    height:100vh;
+    height:220vh;
     width:100%;
 }
 .lettalkproduct{
@@ -194,19 +194,28 @@
 }
 .contact-form input{
     width: 200px;
+    border: none;
+    outline: none;
     /* background:red; */
 }
 .contact-formmessage{
     border-bottom: 1px solid black;
     margin-top:3rem;
+    width:440px;
 }
 
-.contact-formmessage input{
+.contact-formmessage textarea{
+    border: none;
+    outline: none;
+
+    background-color: white;
+    color: black;
     /* height: 100px; */
     /* background: red; */
     margin-top: 7rem;
     width:440px;
 }
+
 .contact-useremail{
     display: flex;
     flex-direction: row;

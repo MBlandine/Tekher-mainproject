@@ -101,7 +101,7 @@ Over the years, we have refined our technology to ensure accuracy, efficiency, a
       </div>
       
       <div className='contact-formmessage'><div>Message</div><textarea name="message"  required></textarea></div>
-      <div className='contact-button'><button type="submit">SEND MESSAGE</button></div>
+      <div ><button className='contact-button' type="submit">SEND MESSAGE</button></div>
       </form>
     
     <div className='contact-right'>

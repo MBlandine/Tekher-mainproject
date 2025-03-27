@@ -112,4 +112,44 @@ label{
       flex-direction: row;
       gap: 20px;
       font-size: 11px;
+}
+
+.signup-black {
+    /* background-color: blue; */
+    background: linear-gradient(to top, black, transparent);
+    height: 100vh;
+    width: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* display: inline-block; */
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hover Effect */
+  .signup-black:hover {
+    /* background-color: white; */
+    background: linear-gradient(to top, black, transparent);
+    color: black;
+    transform: scale(1.1); /* Slightly enlarge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Active (when clicked) */
+  .signup-black:active {
+    transform: scale(0.95); /* Slightly shrink */
+  }
+  .signup-both{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: -6rem; */
+    gap: 0.5rem;
   }
