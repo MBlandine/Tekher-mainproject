@@ -12,7 +12,7 @@ import Home from './components/Home.jsx'
 // import OneTimeUser from "./components/OneTimeUser.jsx";
 import Registration from "./components/Registration.jsx";
 import Login from "./components/Login.jsx";
-
+import Contact from "./components/Contact.jsx";
 
 
 // import DashboardLayout from "./AllDashboard/DashboardLayout.jsx";
@@ -49,6 +49,8 @@ const App = () => {
       {/* < Route path="/OneTimeUser" element={<OneTimeUser/>}/> */}
       < Route path="/Registration"element={<Registration/>}/>
       < Route path="/Login"element={<Login/>}/>
+      < Route path="/Contact"element={<Contact/>}/>
+
       
 
 

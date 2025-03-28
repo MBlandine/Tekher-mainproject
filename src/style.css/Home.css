@@ -126,8 +126,20 @@
     justify-content: center;
     gap: 1rem;
 }
-.down-one .icon{
-    color: blue;
+.down-one .icon11{
+    color:  rgb(199, 21, 21);
+    font-size: 40px;
+}
+.down-one .icon22{
+    color:  rgb(86, 133, 16);
+    font-size: 40px;
+}
+.down-one .icon33{
+    color:  rgb(71, 151, 222);
+    font-size: 40px;
+}
+.down-one .icon44{
+    color: rgb(201, 40, 123);
     font-size: 40px;
 }
 .down-one .accurate{
@@ -247,11 +259,7 @@
     flex-direction: column;
     gap: 5px;
 }
-.contacts{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
+
 .icon1{
     /* background-color: rgb(0, 179, 255); */
     color: black;
@@ -316,18 +324,32 @@
     display: flex;
     justify-content: center;
 }
-.contactt{
+.contacttss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* height: 0; */
+    /* width: 50px; */
+    /* background-color: red; */
+}
+.contactts{
     font-size: 13px;
     font-weight: 700;
     display: flex;
     justify-content: center;
     
 }
-.contact1{
+.contact1s{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* width: 200px; */
+    /* background-color: red; */
 }
-.contact2{
+.contact2s{
     display: flex;
     justify-content: center;
 }

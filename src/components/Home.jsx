@@ -14,6 +14,9 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import { MdLocalHospital } from "react-icons/md";
+import { LiaStumbleuponCircle } from "react-icons/lia";
+import { HiMiniCurrencyDollar } from "react-icons/hi2";
+import { MdPregnantWoman } from "react-icons/md";
 const Home = () =>{ 
   const form = useRef()
 
@@ -40,7 +43,7 @@ const Home = () =>{
             <div className='home-menu'>
                 
                    <Link to= "/Home"> <div className='home-icon'><IoHomeSharp className='home-iconn' />HOME</div></Link>
-                    <Link to="/Registration"><div className='home-icon'><BsFillPersonFill  className='home-iconn' />LOGIN/ REGISTER</div></Link>
+                    <Link to="/Login"><div className='home-icon'><BsFillPersonFill  className='home-iconn' />LOGIN/ REGISTER</div></Link>
                     <Link to="/DiabetesPrediction"><div className='home-icon'><BsFillPersonFill className='home-iconn'/>ONE TIME USER?</div></Link>
                     <div className='icon'><FaRobot className='home-iconn'/>AIML GEEKS?</div>
                 
@@ -63,23 +66,23 @@ Over the years, we have refined our technology to ensure accuracy, efficiency, a
     </diV>
     <div className='lettalkproduct-down'>
       <div className='down-one'>
-        <div className='icon'>< MdLocalHospital/></div>
+        <div className='icon11'><LiaStumbleuponCircle /></div>
         <div className='accurate'>Accurate</div>
         <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
       </div>
       <div className='down-one'>
-        <div className='icon'>< MdLocalHospital/></div>
-        <div className='accurate'>Accurate</div>
+        <div className='icon22'>< MdLocalHospital/></div>
+        <div className='accurate'>We Care about your Health</div>
         <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
       </div>
       <div className='down-one'>
-        <div className='icon'>< MdLocalHospital/></div>
-        <div className='accurate'>Accurate</div>
+        <div className='icon33'><HiMiniCurrencyDollar /></div>
+        <div className='accurate'>It's Absolutely Free!</div>
         <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
       </div>
       <div className='down-one'>
-        <div className='icon'>< MdLocalHospital/></div>
-        <div className='accurate'>Accurate</div>
+        <div className='icon44'><MdPregnantWoman /></div>
+        <div className='accurate'>Exclusively for Women</div>
         <div className='text'>Infusing the power of machine learning with a simple, intuitive user interface, we bring forth our product.</div>
       </div>
     </div>
@@ -106,7 +109,7 @@ Over the years, we have refined our technology to ensure accuracy, efficiency, a
     
     <div className='contact-right'>
         <div className='contact-icons'>
-          <div  className='icon3'><FaQuestionCircle className='iconic' />FAQ</div>
+          <Link to="Contact"><div  className='icon3'><FaQuestionCircle className='iconic' />FAQ</div></Link>
           <div className='icon3'><div><FaLocationDot  className='iconic'/></div><div>LOCATION</div></div>
         </div>
         <div className='contact-info'>
@@ -117,10 +120,10 @@ Over the years, we have refined our technology to ensure accuracy, efficiency, a
             <div className='adress3'>Tamil Naduk</div>
             <div className='adress4'>600032</div>
           </div>
-          <div className='contacts'>
-            <div className='contactt'>Contact:</div>
-            <div className='contact1'>Phone: +91 9876543210</div>
-            <div className='contact2'>Email: neuralhack@gmail.com</div>
+          <div className='contacttss'>
+            <div className='contactts'>Contact:</div>
+            <div className='contact1s'>Phone: +91 9876543210</div>
+            <div className='contact2s'>Email: neuralhack@gmail.com</div>
           </div>
           <div className='three-icon'>
             <div><AiFillFacebook /></div>
