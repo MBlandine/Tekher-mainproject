@@ -45,7 +45,7 @@ useEffect(() => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get("http://localhost:3000/DashPage");
-      console.log("Fetched Data:", response.data); // ✅ Debugging log
+      console.log("Fetched Data:", response.data); // Debugging log
       if (response.data && Array.isArray(response.data.data)) {
         setUsers(response.data.data);
       } else {

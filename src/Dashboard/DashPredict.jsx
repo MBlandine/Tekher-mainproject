@@ -68,21 +68,21 @@ const navigate = useNavigate();
             age
         };
     
-        console.log("📤 Sending Data to Backend:", data);  // ✅ Log what you're sending
+        console.log(" Sending Data to Backend:", data);  //  Log what you're sending
     
         try {
             const response = await axios.post("http://localhost:3000/DashPredict", data);
-            console.log("✅ Server Response:", response.data);  // ✅ Log the server response
+            console.log(" Server Response:", response.data);  //  Log the server response
             alert('Data Submitted Successfully');
             navigate('/DashPage')
         } catch (err) {
-            console.error("❌ Axios Error:", err);
+            console.error(" Axios Error:", err);
     
             if (err.response) {
-                console.log("🔴 Backend Response Error:", err.response.data);
+                console.log(" Backend Response Error:", err.response.data);
                 alert(`Backend Error: ${JSON.stringify(err.response.data, null, 2)}`);
             } else {
-                console.log("🔴 Network Error:", err.message);
+                console.log(" Network Error:", err.message);
                 alert(`Network Error: ${err.message}`);
             }
         }
@@ -105,7 +105,7 @@ const navigate = useNavigate();
         <div className='predict-right'>
         <li className='predict-item'><MdDashboard className='predicticon'/>DASHBOARD</li>
         <Link to="/Registration"><li className='predict-item'><CgMenuGridR className='predicticon'/>OTHERS <IoMdArrowDropdown /></li></Link>
-        <Link to="/Home"><li className='predict-buton'><BsFillPersonFill />LOGOUT</li></Link>
+        <Link to="/Login"><li className='predict-buton'><BsFillPersonFill />LOGOUT</li></Link>
         </div>
         </div>
 

@@ -48,7 +48,7 @@ const Login = () => {
       alert("Login Successful");
 
       // Redirect to dashboard after successful login
-      navigate('/DashPage');
+      navigate('/DashPredict');
     } catch (error) {
       // Handling errors from the backend
       console.error("Login Error: ", error);
