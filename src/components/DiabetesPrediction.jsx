@@ -247,7 +247,7 @@ const DiabetesPrediction = () => {
            <Link to="/Home"><div className='icon-onetimeuser'><IoHomeSharp className='iconn-onetimeuser' />HOME</div></Link>
            <Link to="/Registration"><div className='icon-onetimeuser'><BsFillPersonFill  className='iconn-onetimeuser' />LOGIN / REGISTER</div></Link>
            <Link to="/DiabetesPrediction"><div className='icon-onetimeuser'><BsFillPersonFill className='iconn-onetimeuser'/>ONE TIME USER?</div></Link>
-           <div className='icon-onetimeuser'><FaRobot className='iconn-onetimeuser'/>AIML GEEKS?</div>
+           <Link className='"https://gamma.app/docs/Diabetes-Prediction-System-Web-Implementation-s0y02son70l656x?mode=doc" target="_blank" rel="noopener noreferrer"'><div className='icon-onetimeuser'><FaRobot className='iconn-onetimeuser'/>AIML GEEKS?</div></Link>
        
    </div>
 </div>

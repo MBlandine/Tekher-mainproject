@@ -24,7 +24,7 @@
 .home-icon{
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap: 2.8px;
     color: white;
 }
 .home-iconn{

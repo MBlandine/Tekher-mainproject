@@ -45,7 +45,7 @@ const Home = () =>{
                    <Link to= "/Home"> <div className='home-icon'><IoHomeSharp className='home-iconn' />HOME</div></Link>
                     <Link to="/Login"><div className='home-icon'><BsFillPersonFill  className='home-iconn' />LOGIN/ REGISTER</div></Link>
                     <Link to="/DiabetesPrediction"><div className='home-icon'><BsFillPersonFill className='home-iconn'/>ONE TIME USER?</div></Link>
-                    <div className='icon'><FaRobot className='home-iconn'/>AIML GEEKS?</div>
+                    <Link to="https://gamma.app/docs/Diabetes-Prediction-System-Web-Implementation-s0y02son70l656x?mode=doc" target="_blank" rel="noopener noreferrer"><div className='home-icon'><FaRobot className='home-iconn'/>AIML GEEKS?</div></Link>
                 
             </div>
         </div>    

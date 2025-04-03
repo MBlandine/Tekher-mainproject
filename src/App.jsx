@@ -13,6 +13,7 @@ import Home from './components/Home.jsx'
 import Registration from "./components/Registration.jsx";
 import Login from "./components/Login.jsx";
 import Contact from "./components/Contact.jsx";
+// import ProtectedRoute from "./components/ProtectedRoute"; // Import ProtectedRoute
 
 
 // import DashboardLayout from "./AllDashboard/DashboardLayout.jsx";
@@ -38,10 +39,10 @@ const App = () => {
       < Route path='/DashPredict' element={< DashPredict/>}/>
       < Route path="/Update/:id" element={<Update/>}/>
       <Route path="/DiabetesPrediction" element={<DiabetesPrediction />} />
-      <Route path='/DashPage' element={<DashPage/>}>
+      <Route path='/DashPage' element={<DashPage/>} />
       
      
-      </Route>
+      
 
       {/* <Route path="/" index element={<Layout/>}/> */}
       <Route path="/" index element={<Home/>}/>
@@ -52,8 +53,22 @@ const App = () => {
       < Route path="/Contact"element={<Contact/>}/>
 
       
+{/* 
+           Doctor-Only Routes
+           <Route element={<ProtectedRoute allowedRoles={["doctor"]} />}>
+          <Route path="/DashPage" element={<DashPage />} />
+        </Route> */}
 
+        {/*  Patient-Only Routes */}
+        {/* <Route element={<ProtectedRoute allowedRoles={["patient"]} />}>
+          <Route path="/DashPredict" element={<DashPredict />} />
+        </Route> */}
 
+            {/*  Unauthorized Page */}
+            {/* <Route path="/unauthorized" element={<h2>Access Denied</h2>} /> */}
+
+           {/*  Catch-all for unknown routes */}
+           {/* <Route path="*" element={<h2>Page Not Found</h2>} /> */}
      
       {/* <Route path="/" element={<DashboardLayout/>}>
       <Route path="/Card" index element={<Card/>}/>

@@ -95,7 +95,7 @@ label{
 .register-icon{
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap: 2px;
     color: white;
 }
 .register-iconn{

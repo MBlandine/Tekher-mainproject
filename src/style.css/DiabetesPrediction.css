@@ -13,13 +13,14 @@
     padding: 20px;
     padding-top: 2rem;
     
-    /* background-color:black; */
+    /* background-color:blue; */
 }
 .icon-onetimeuser{
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap:2.8px;
     color: white;
+    /* background-color: red; */
 }
 .iconn-onetimeuser{
     font-size: 13px;

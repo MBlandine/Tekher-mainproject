@@ -116,7 +116,8 @@ const Update = () => {
           <div className='update-top'>Medical Data</div>
           <div className='update-bottom'>
             <div className='update-title'>Please provide the required data of the patient</div>
-            <form className='update-middle' onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit}>
+              <div className='update-middle'>
               <div className='update-leftside'>
                 <div className='update-form'>
                   <div>Patient Name</div>
@@ -162,9 +163,10 @@ const Update = () => {
                   <div><input type="number" value={age} onChange={(e) => setAge(e.target.value)} required min="0" /></div>
                 </div>
               </div>
+              </div>
 
-              <div className='update-buttonn'>
-                <button type='submit'>CLICKCLICK!!!</button>
+              <div >
+                <button className='update-button' type='submit'>CLICKCLICK!!!</button>
               </div>
             </form>
           </div>

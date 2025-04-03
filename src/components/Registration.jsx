@@ -65,7 +65,7 @@ const Registration = () => {
           <Link to="/Home"><div className='register-icon'><IoHomeSharp className='iconn' />HOME</div></Link>
           <Link to="/Registration"><div className='register-icon'><BsFillPersonFill className='iconn' />LOGIN / REGISTER</div></Link>
           <Link to="/DiabetesPrediction"><div className='register-icon'><BsFillPersonFill className='iconn'/>ONE TIME USER?</div></Link>
-          <div className='icon'><FaRobot className='iconn'/>AIML GEEKS?</div>
+          <Link to="https://gamma.app/docs/Diabetes-Prediction-System-Web-Implementation-s0y02son70l656x?mode=doc" target="_blank" rel="noopener noreferrer"><div className='register-icon'><FaRobot className='iconn'/>AIML GEEKS?</div></Link>
         </div>
       </div>
 

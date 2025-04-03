@@ -7,164 +7,123 @@ import { IoMdArrowDropdown, IoMdSearch } from "react-icons/io";
 import { FaWheelchair } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { IoDownloadOutline } from "react-icons/io5";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const DashPage = () => {
   const [users, setUsers] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');  // State to hold the search query
+  const [loggedInUser, setLoggedInUser] = useState("");
 
-  // const[dataList, setDataList] = useState([])
-
-
-
-
-
-
-   
-// const getFetchData = async ()=>{
-//   const data = await axios.get("http://localhost:3000/DashPage")
-//   console.log(data)
-//   if(data.data.success){
-//     setDataList(data.data.data)
-  
-    
-//   }
-// }
-// useEffect(()=>{
-//   getFetchData()
-// },[])
-
-// console.log(dataList)
+  useEffect(() => {
+    // Get the logged-in user's name from localStorage
+    const storedUser = localStorage.getItem("loggedInUser");
+    if (storedUser) {
+      setLoggedInUser(storedUser);
+    }
+  }, []);
 
 
-
-
-
-
-
-
-useEffect(() => {
-  const fetchUsers = async () => {
-    try {
-      const response = await axios.get("http://localhost:3000/DashPage");
-      console.log("Fetched Data:", response.data); // Debugging log
-      if (response.data && Array.isArray(response.data.data)) {
-        setUsers(response.data.data);
-      } else {
-        console.log("No patient data found.");
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/DashPage");
+        console.log("Fetched Data:", response.data); // Debugging log
+        if (response.data && Array.isArray(response.data.data)) {
+          setUsers(response.data.data);
+        } else {
+          console.log("No patient data found.");
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
       }
-    } catch (error) {
-      console.error("Error fetching user data:", error);
+    };
+
+    fetchUsers();
+  }, []);
+
+  const handleDelete = async (id) => {
+    try {
+      console.log(`Deleting patient with _id: ${id}`);
+      const response = await fetch(`http://localhost:3000/DashPage/${id}`, { method: "DELETE" });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to delete user");
+      }
+
+      const data = await response.json();
+      console.log("Deleted successfully:", data);
+      setUsers((prevUsers) => prevUsers.filter((user) => user._id !== id));
+    } catch (err) {
+      console.error("Error deleting:", err.message);
     }
   };
 
-  fetchUsers();
-}, []);
+  // Function to handle the search input
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
 
+  // Filtered users based on search query
+  const filteredUsers = users.filter((user) => {
+    return (
+      user.patientName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      user.patientID.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      user.pregnancies.toString().includes(searchQuery) ||
+      user.glucose.toString().includes(searchQuery) ||
+      user.bloodpressure.toString().includes(searchQuery) ||
+      user.skinthickness.toString().includes(searchQuery) ||
+      user.insulin.toString().includes(searchQuery) ||
+      user.BMI.toString().includes(searchQuery) ||
+      user.DPF.toString().includes(searchQuery) ||
+      user.age.toString().includes(searchQuery)
+    );
+  });
 
-useEffect(() => {
-  console.log("Users state updated:", users);
-}, [users]);
+  // Function to download the table as a PDF
+  const handleDownloadPDF = () => {
+    const input = document.getElementById("table-to-download"); // Get the table element
+    html2canvas(input, {
+      scale: 4, // Increase scale for better resolution
+      useCORS: true,
+      letterRendering: true,
+      height: input.scrollHeight + 20, // Increase height to ensure buttons aren't cut off
+      width: input.scrollWidth + 20,  // Increase width to ensure full content
+    }).then((canvas) => {
+      const pdf = new jsPDF({
+        orientation: "landscape", // Landscape mode for better table fit
+        unit: "mm",
+        format: "a4",
+      });
 
+      const imgData = canvas.toDataURL('image/jpeg');
+      const imgWidth = 290; // Slightly less than A4 width for margins
+      const imgHeight = (canvas.height * imgWidth) / canvas.width; // Maintain aspect ratio
 
+      // Adjust the image position to fit the content properly on the page
+      pdf.addImage(imgData, 'JPEG', 10, 10, imgWidth, imgHeight);
 
-
-// const handleDelete = async (id) => {
-//   try {
-//     const response = await axios.delete(`http://localhost:3000/DashPage/${id}`);
-//     console.log("Delete Response:", response); // ✅ Debugging log
-//     setUsers(users.filter(user => user.patientID !== id));
-//   } catch (error) {
-//     console.error("Error deleting patient data:", error.response ? error.response.data : error);
-//   }
-// };
-
-
-// const handleDelete = (id) => {
-//   console.log(`Deleting patient with _id: ${id}`);
-
-//   // Example: If using state
-//   setUsers((prevUsers) => prevUsers.filter((user) => user._id !== id));
-
-//   // If deleting from an API (adjust endpoint based on your backend)
-//   fetch(`/api/delete/${id}`, { method: "DELETE" })
-//     .then((res) => res.json())
-//     .then((data) => console.log("Deleted successfully:", data))
-//     .catch((err) => console.error("Error deleting:", err));
-// };
-
-
-// Handle deletion
-const handleDelete = async (id) => {
-  try {
-    console.log(`Deleting patient with _id: ${id}`);
-    // Make the DELETE request to the backend with the patient _id
-    const response = await fetch(`http://localhost:3000/DashPage/${id}`, { method: "DELETE" });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || "Failed to delete user");
-    }
-
-    const data = await response.json();
-    console.log("Deleted successfully:", data);
-
-    // Update state to remove the deleted patient
-    setUsers((prevUsers) => prevUsers.filter((user) => user._id !== id));
-
-  } catch (err) {
-    console.error("Error deleting:", err.message);
-  }
-};
-
-
-
-
-
-
-
-
+      pdf.save("patient_data.pdf");
+    });
+  };
 
   return (
     <div className='dashpage'>
       {/* Navbar Section */}
       <div className='dashnavbar-dashpage'>
-        <div className='dashpage-left'>WELCOME,</div>
+        <div className='dashpage-left'>Welcome, <strong className='name-dashpage'>{loggedInUser || "User"}</strong></div>
         <div className='dashpage-right'>
-          <li className='item-dashpage'><MdDashboard className='dashpage-icon'/>DASHBOARD</li>
+          <Link className='/DashPage'><li className='item-dashpage'><MdDashboard className='dashpage-icon'/>DASHBOARD</li></Link>
           <Link to="/DashPredict"><li className='item-dashpage'><CgMenuGridR className='dashpage-icon'/>OTHERS <IoMdArrowDropdown /></li></Link>
           <Link to="/Home"><li className='dashpage-button'><BsFillPersonFill />LOGOUT</li></Link>
-          {/* <li><button className='dashpage-button' ><BsFillPersonFill />LOGOUT</button></li> */}
         </div>
       </div>
 
       {/* Cards Section */}
       <div className='cards-dashpage'>
-      <div className='cardcontainer-dashpage'>
-        <div className='card-dashpage'>
-          <div className='cardcontent-dashpage'>
-            <div className='patients-dashpage'>{users.length} Patients</div>
-            <div>Total Number of Patients Analysed</div>
-          </div> 
-          <div className='smallcard1-dashpage'><FaWheelchair className='icon-dashpage'/> Patients Analysed</div>
-        </div>
-      </div>
-      <div className='cardcontainer-dashpage'>
-        <div className='card-dashpage'>
-          <div className='cardcontent-dashpage'>
-            <div className='patients-dashpage'>SVM</div>
-            <div>Model : 77% ACCURACY</div>
-          </div> 
-          <div className='smallcard2-dashpage'><FaWheelchair className='icon-dashpage'/> Patients Analysed</div>
-        </div>
-      </div>
-      <div className='cardcontainer-dashpage'>
-        <div className='card-dashpage'>
-          <div className='cardcontent-dashpage'>
-            <div className='patients-dashpage'>Decision Tree</div>
-            <div>Model : 75% ACCURACY</div>
-          </div> 
-          <div className='smallcard3-dashpage'><FaWheelchair className='icon-dashpage'/> Patients Analysed</div>
-        </div>
-      </div>
+        {/* Add your cards here */}
       </div>
 
       {/* Table Section */}
@@ -172,14 +131,24 @@ const handleDelete = async (id) => {
         <div className='orderspage-dashpage'>
           <div className='tablehead-dashpage'>
             <div>PATIENTS DATA HISTORY</div>
-            <div className='dashsearch-dashpage'> 
-              <IoMdSearch className='icon-dashpage' /> 
-              <input type='search' placeholder='Search'/>
+            <div className='dashsearchh-dashpage'>
+              <div className='dashsearch-dashpage'>
+                <IoMdSearch className='icon-dashpage' />
+                <input
+                  type='search'
+                  placeholder='Search'
+                  value={searchQuery}
+                  onChange={handleSearch}
+                />
+              </div>
+              {/* Download icon */}
+              <IoDownloadOutline className='downloadicon-dashpage' onClick={handleDownloadPDF} />
             </div>
           </div>
 
+          {/* Table to Download */}
           <div className='table-dashpage'>
-            <table>
+            <table id="table-to-download">
               <thead>
                 <tr className='patient-items'>
                   <th className='tabletitle-dashpage'>Patient Name</th>
@@ -196,32 +165,28 @@ const handleDelete = async (id) => {
                 </tr>
               </thead>
 
-
-<tbody>
-  {users.map((el, index) => (
-    <tr key={el._id || index} className='patient-item'>
-      <td className='patient-item1'>{el.patientName}</td>
-      <td className='patient-item2'>{el.patientID}</td>
-      <td className='patient-item3'>{el.pregnancies}</td>
-      <td className='patient-item4'>{el.glucose}</td>
-      <td className='patient-item5'>{el.bloodpressure}</td>
-      <td className='patient-item6'>{el.skinthickness}</td>
-      <td className='patient-item7'>{el.insulin}</td>
-      <td className='patient-item8'>{el.BMI}</td>
-      <td className='patient-item9'>{el.DPF}</td>
-      <td className='patient-item10'>{el.age}</td>
-      <td >
-        <Link to={`/update/${el._id}`}>
-          <button className='action-update'>Edit</button>
-        </Link>
-        <button className='action-delete' style={{ marginLeft: "5px" }}  onClick={(e) => {e.stopPropagation(); // Prevent the row click event from firing
-                 handleDelete(el._id); // Pass the _id for deletion
-                }}>Delete</button>
-      </td>
-    </tr>
-  ))}
-</tbody>
-
+              <tbody>
+                {filteredUsers.map((el, index) => (
+                  <tr key={el._id || index} className='patient-item'>
+                    <td className='patient-item1'>{el.patientName}</td>
+                    <td className='patient-item2'>{el.patientID}</td>
+                    <td className='patient-item3'>{el.pregnancies}</td>
+                    <td className='patient-item4'>{el.glucose}</td>
+                    <td className='patient-item5'>{el.bloodpressure}</td>
+                    <td className='patient-item6'>{el.skinthickness}</td>
+                    <td className='patient-item7'>{el.insulin}</td>
+                    <td className='patient-item8'>{el.BMI}</td>
+                    <td className='patient-item9'>{el.DPF}</td>
+                    <td className='patient-item10'>{el.age}</td>
+                    <td>
+                      <Link to={`/update/${el._id}`}>
+                        <button className='action-update'>Edit</button>
+                      </Link>
+                      <button className='action-delete' style={{ marginLeft: "5px" }} onClick={(e) => { e.stopPropagation(); handleDelete(el._id); }}>Delete</button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>

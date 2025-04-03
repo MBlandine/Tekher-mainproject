@@ -103,7 +103,7 @@ const navigate = useNavigate();
         <div className='predictnavbar'>
         <div className='predict-left'>WELCOME,</div>
         <div className='predict-right'>
-        <li className='predict-item'><MdDashboard className='predicticon'/>DASHBOARD</li>
+        <Link className='/DashPage'><li className='predict-item'><MdDashboard className='predicticon'/>DASHBOARD</li></Link>
         <Link to="/Registration"><li className='predict-item'><CgMenuGridR className='predicticon'/>OTHERS <IoMdArrowDropdown /></li></Link>
         <Link to="/Login"><li className='predict-buton'><BsFillPersonFill />LOGOUT</li></Link>
         </div>

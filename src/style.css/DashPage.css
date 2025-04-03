@@ -41,6 +41,9 @@ align-items: center;
     font-size: 1rem;
     margin-top: 2px;    
 }
+.name-dashpage{
+    font-size: 30px;
+}
 .item-dashpage{
     color: white;
 }
@@ -166,6 +169,15 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     margin-right: 10rem;
     margin-top: 10rem;
 }
+.dashsearchh-dashpage{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+}
+.downloadicon-dashpage{
+    font-size: 32px;
+}
 .dashsearch-dashpage{
  height: 30px;
  /* width: 200px; */
@@ -195,15 +207,17 @@ box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* gap: 30rem; */
     align-items: center;
     /* gap:30.8rem; */
     
     color: black;
     font-size: 1.5rem;
    /* background-color: blue; */
-   width: 169vh;
+   width: 180vh;
    height: 70px;
    margin-left: 2rem;
+   
  }
  tr .tabletitle-dashpage{
   
@@ -316,16 +330,7 @@ th{
     /* margin-right: 2rem; */
 }
 
-.patient-item3{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* width: 40px; */
-    /* background-color: #8a3434; */
-    /* margin-left: 1rem; */
-    /* margin-right: 1rem; */
-}
+
 
 .patient-item4{
     display: flex;
